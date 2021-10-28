@@ -11,10 +11,8 @@ const ListNotes = () => {
             setNotesList(arraytmp);
             return;
         },
-
         []
     );
-
 
     return (
         <div className="col-3 border border-primary" >

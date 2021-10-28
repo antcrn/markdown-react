@@ -22,7 +22,7 @@ const EditorMarkdown = () => {
         setNote(currentNote);
     };
 
-    const save = () => {
+    const handleSave = () => {
         localStorage.setItem(note.id, JSON.stringify(note));
     }
     const converter = new Showdown.Converter();
@@ -41,7 +41,7 @@ const EditorMarkdown = () => {
                     <br />
                     <textarea className="form-control" placeholder="Type your message ..." name="note" value={note.noteValue} onChange={onChangeText} />
                     <br />
-                    <button className="btn btn-danger mb-4" onClick={save} >Save note</button>
+                    <button className="btn btn-danger mb-4" onClick={handleSave} >Save note</button>
                 </div>
             </div>
         </>
